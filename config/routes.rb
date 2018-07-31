@@ -4,12 +4,13 @@ Rails.application.routes.draw do
   # List taks
   get 'tasks' => 'tasks#index'
 
+  # add a task ( new & create )
+  get 'tasks/new' => 'tasks#new', as: 'new_task'
+  post 'tasks' => 'tasks#create'
+
   # View details of a task
   get 'tasks/:id' => 'tasks#show', as: 'task'
 
-  # add a task ( new & create )
-  get 'tasks/new' => 'tasks#new'
-  post 'tasks' => 'tasks#create'
 
   # update a task (edit & update)
   get 'tasks/:id/edit' => 'tasks#edit'
