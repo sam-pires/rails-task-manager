@@ -8,13 +8,12 @@ Rails.application.routes.draw do
   get 'tasks/new' => 'tasks#new', as: 'new_task'
   post 'tasks' => 'tasks#create'
 
-  # View details of a task
-  get 'tasks/:id' => 'tasks#show', as: 'task'
-
-
   # update a task (edit & update)
   get 'tasks/:id/edit' => 'tasks#edit'
   patch 'tasks/:id' => 'tasks#update'
+
+  # View details of a task
+  get 'tasks/:id' => 'tasks#show', as: 'task'
 
   #delete a task
   delete 'tasks/:id' => 'tasks#destroy'
