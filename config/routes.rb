@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   post 'tasks' => 'tasks#create'
 
   # update a task (edit & update)
-  get 'tasks/:id/edit' => 'tasks#edit'
+  get 'tasks/:id/edit' => 'tasks#edit', as: 'edit_task'
   patch 'tasks/:id' => 'tasks#update'
 
   # View details of a task

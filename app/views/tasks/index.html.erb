@@ -1,5 +1,10 @@
 <h1>My tasks</h1>
 
+<%= link_to "Add a nex task", new_task_path %>
+<br>
+<br>
+<br>
+
 <% @tasks.each do |task| %>
 
   <% if task[:completed] == true %>
@@ -9,5 +14,6 @@
   <% end %>
 
   <h2><%= link_to task[:title], task_path(task) %></h2>
+  <p><%= link_to "delete", task_path(task), method: :delete %></p>
 
 <% end %>
