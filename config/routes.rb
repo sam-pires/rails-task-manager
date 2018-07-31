@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'tasks' => 'tasks#index'
 
   # View details of a task
-  get 'tasks/:id' => 'tasks#show'
+  get 'tasks/:id' => 'tasks#show', as: 'task'
 
   # add a task ( new & create )
   get 'tasks/new' => 'tasks#new'
